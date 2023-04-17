@@ -4,7 +4,7 @@
     dest: /etc/yum.repos.d/mysql.repo
 
 - name: disable MYSQL 8
-  ansible.builtin.shell:  mysql-community-server -y
+  ansible.builtin.shell: dnf module mysql -y
 
 - name: install mysql 5.7
   ansible.builtin.yum:
