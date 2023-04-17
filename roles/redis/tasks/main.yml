@@ -9,12 +9,7 @@
     name: "@redis:remi-6.2"
     state: latest
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /etc/redis.conf
-    state: directory
-
-- name: updated address redis
+- name: Update listen address redis
   ansible.builtin.replace:
     path: /etc/redis.conf
     regexp: '127.0.0.1'
