@@ -12,9 +12,9 @@
 
 - name: Create a directory if it does not exist
   ansible.builtin.file:
-    path: /etc/redis.conf
+    path: ./redis-server
     state: directory
-    mode: '0755'
+
 
 - name: Update listen address redis
   ansible.builtin.replace:
