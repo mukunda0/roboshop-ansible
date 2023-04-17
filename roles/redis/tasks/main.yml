@@ -11,12 +11,12 @@
 
 - name: Create a directory if it does not exist
   ansible.builtin.file:
-    path: /etc/redis/redis.conf
+    path: /etc/redis.conf
     state: directory
 
 - name: updated address redis
   ansible.builtin.replace:
-    path: "/etc/redis/redis.conf"
+    path: /etc/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
