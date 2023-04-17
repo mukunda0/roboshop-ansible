@@ -10,10 +10,6 @@
     state: installed
 
 
-- name: Create a directory if it does not exist
-  ansible.builtin.file:
-    path: /etc/redis.conf
-    state: directory
 
 
 - name: Update listen address redis
