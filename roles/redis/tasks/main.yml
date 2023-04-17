@@ -7,7 +7,7 @@
 - name: Install the latest redis
   ansible.builtin.dnf:
     name: "@redis:remi-6.2"
-    state: latest
+    state: installed
 
 - name: Update listen address redis
   ansible.builtin.replace:
