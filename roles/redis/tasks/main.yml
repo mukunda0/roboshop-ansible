@@ -6,7 +6,7 @@
 
 - name: Install the latest redis
   ansible.builtin.dnf:
-    name: "@postgresql:remi-6.2"
+    name: "@redis:remi-6.2"
     state: latest
 
 - name: updated address redis
