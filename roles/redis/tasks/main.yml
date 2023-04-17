@@ -1,4 +1,4 @@
-- name: Install redis
+- name: Install redis repos
   ansible.builtin.yum:
     name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
     state: installed
@@ -8,6 +8,11 @@
   ansible.builtin.dnf:
     name: "@redis:remi-6.2"
     state: latest
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /etc/redis/redis.conf
+    state: directory
 
 - name: updated address redis
   ansible.builtin.replace:
