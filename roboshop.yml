@@ -1,6 +1,4 @@
 - name: Run Roboshop Setup
   hosts: localhost
-  serial: 1
-  become: true
   roles:
     - "{{ role_name }}"
