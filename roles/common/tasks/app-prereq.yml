@@ -12,7 +12,7 @@
     path: /app
     state: directory
 
-- name: download and {{ component }} extract
+- name: download and extract {{ component }} content
   ansible.builtin.unarchive:
     src:  https://roboshop-artifacts.s3.amazonaws.com/{{ component }}.zip
     dest: /app

@@ -1,4 +1,4 @@
-- name: Install nodejs
+- name: configure  nodejs repo
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 - name: Install nodejs
@@ -6,7 +6,7 @@
     name: nodejs
     state: installed
 
-- name: app pre-requisties
+- name: app pre-req
   ansible.builtin.import_tasks:
     file: app-prereq.yml
 
