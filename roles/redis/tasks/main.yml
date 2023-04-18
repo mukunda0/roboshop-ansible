@@ -9,9 +9,6 @@
     name: "@redis:remi-6.2"
     state: installed
 
-
-
-
 - name: Update listen address redis
   ansible.builtin.replace:
     path: /etc/redis.conf
