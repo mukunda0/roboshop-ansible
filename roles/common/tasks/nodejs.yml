@@ -6,3 +6,15 @@
     name: nodejs
     state: installed
 
+- name: app pre-requisties
+  ansible.builtin.import_tasks:
+    file: app-prereq.yml
+
+- name: Install nodejs dependencies
+  community.general.npm:
+    path: /app
+
+- name: schema setup
+  ansible.builtin.import_tasks:
+    file: schema-setup.yml
+    when: schema-type is defined
