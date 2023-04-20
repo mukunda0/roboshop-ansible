@@ -1,5 +1,5 @@
 - name: Copy SystemD Config file
-  ansible.builtin.template:
+  ansible.builtin.templates:
     src: "{{component}}.service"
     dest: /etc/systemd/system/{{component}}.service
 
