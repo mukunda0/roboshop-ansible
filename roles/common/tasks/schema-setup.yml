@@ -14,7 +14,7 @@
 
 
        - name: load schema
-         ansible.builtin.shell: mongo --host mongodb-dev.devops71a.online < "/app/schema/{{component}}.js"
+         ansible.builtin.shell: mongo --host mongodb-dev.devops71a.online < /app/schema/{{component}}.js
 
 - name: mysql schema
   when: schema_type == "mysql"
@@ -26,4 +26,4 @@
 
 
     - name: load schema
-      ansible.builtin.shell: mysql -h mysql-dev.devops71a.online -uroot -pRoboShop@1 < "/app/schema/{{component}}.sql"
+      ansible.builtin.shell: mysql -h mysql-dev.devops71a.online -uroot -pRoboShop@1 < /app/schema/{{component}}.sql
