@@ -9,12 +9,12 @@
 
        - name: mongodb client
          ansible.builtin.yum:
-          name: mongodb-org-shell
+          name:  mongodb-org-shell
           state: installed
 
 
        - name: load schema
-         ansible.builtin.shell: mongo --host mongodb-dev.devops71a.online < /app/schema/{{component}}.js
+         ansible.builtin.shell: mongo --host mongodb-dev.devops71a.online < "/app/schema/{{component}}.js"
 
 - name: mysql schema
   when: schema_type == "mysql"
